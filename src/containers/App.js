@@ -33,10 +33,17 @@ class App extends Component {
 			return robot.name.toLowerCase().includes(searchfield.toLowerCase());
 		})
 		return !robots.length ?
-			 <h1 className = 'tc'>`This might take a while. If this stayes for more than 3 seconds, check your internet. ROBOFRIENDS loading,  please  chill`</h1> :
+			 <h1 className = 'tc'>  
+			 <p></p>
+			 ROBOFRIENDS loading.
+			 <p></p>
+			 Ouch, might take a second. Please  chill.
+			 <p></p>
+			 If this lingers beyond 3 seconds, check your internet and refresh.  </h1> :
 			(
 				<div className = 'tc'>
 					<h1 className = 'f1'> ROBOFRIENDS </h1>
+
 					<SearchBox searchChange = {this.onSearchChange}/>
 					<Scroll>
 						<CardList robots = {filteredRobots} />
